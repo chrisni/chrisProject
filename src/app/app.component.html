@@ -1,0 +1,8 @@
+<table>
+  <tr>
+    <th *ngFor="let col of columns; let i = index">{{setHeader(col, i)}}</th>
+  </tr>
+  <tr *ngFor="let item of data">
+    <td *ngFor="let column of columns; let i = index" (click)="selectPizza(item,column, i)">{{setData(item[column], column)}}</td>
+  </tr>
+</table>
